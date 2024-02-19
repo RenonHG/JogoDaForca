@@ -1,0 +1,11 @@
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\bin\Debug\JogoDaForca.exe.config
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\bin\Debug\JogoDaForca.exe
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\bin\Debug\JogoDaForca.pdb
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.csproj.AssemblyReference.cache
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.FormJogo.resources
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.FormMenu.resources
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.Properties.Resources.resources
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.csproj.GenerateResource.cache
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.csproj.CoreCompileInputs.cache
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.exe
+C:\Users\renon.hgusson\source\repos\JogoDaForca\JogoDaForca\obj\Debug\JogoDaForca.pdb
