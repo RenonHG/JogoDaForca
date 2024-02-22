@@ -36,24 +36,26 @@
             // lbPalavraSecreta
             // 
             this.lbPalavraSecreta.AutoSize = true;
-            this.lbPalavraSecreta.Location = new System.Drawing.Point(65, 61);
+            this.lbPalavraSecreta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPalavraSecreta.Location = new System.Drawing.Point(54, 33);
             this.lbPalavraSecreta.Name = "lbPalavraSecreta";
-            this.lbPalavraSecreta.Size = new System.Drawing.Size(35, 13);
+            this.lbPalavraSecreta.Size = new System.Drawing.Size(112, 25);
             this.lbPalavraSecreta.TabIndex = 0;
-            this.lbPalavraSecreta.Text = "label1";
+            this.lbPalavraSecreta.Text = "PALAVRA";
             // 
             // txbTentativa
             // 
-            this.txbTentativa.Location = new System.Drawing.Point(68, 200);
+            this.txbTentativa.Location = new System.Drawing.Point(12, 91);
             this.txbTentativa.Name = "txbTentativa";
-            this.txbTentativa.Size = new System.Drawing.Size(186, 20);
+            this.txbTentativa.Size = new System.Drawing.Size(197, 20);
             this.txbTentativa.TabIndex = 1;
             // 
             // btnVerificarLetra
             // 
-            this.btnVerificarLetra.Location = new System.Drawing.Point(276, 200);
+            this.btnVerificarLetra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificarLetra.Location = new System.Drawing.Point(68, 135);
             this.btnVerificarLetra.Name = "btnVerificarLetra";
-            this.btnVerificarLetra.Size = new System.Drawing.Size(75, 20);
+            this.btnVerificarLetra.Size = new System.Drawing.Size(78, 27);
             this.btnVerificarLetra.TabIndex = 2;
             this.btnVerificarLetra.Text = "Tentar";
             this.btnVerificarLetra.UseVisualStyleBackColor = true;
@@ -63,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 259);
+            this.ClientSize = new System.Drawing.Size(238, 219);
             this.Controls.Add(this.btnVerificarLetra);
             this.Controls.Add(this.txbTentativa);
             this.Controls.Add(this.lbPalavraSecreta);

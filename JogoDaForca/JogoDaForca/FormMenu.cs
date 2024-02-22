@@ -25,6 +25,15 @@ namespace JogoDaForca
 
         }
 
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Form formCadastrar = new FormCadastro();
+            formCadastrar.ShowDialog();
+        }
     }
 }

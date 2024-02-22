@@ -42,6 +42,7 @@
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnJogar
             // 
@@ -61,7 +62,7 @@
             this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.MaximumSize = new System.Drawing.Size(350, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 40);
+            this.label1.Size = new System.Drawing.Size(335, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seja bem vindo ao JOGUITO DA FORCA do Renonzera!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,6 +77,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.Name = "FormMenu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

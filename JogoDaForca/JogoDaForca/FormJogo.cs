@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,18 +27,51 @@ namespace JogoDaForca
             lbPalavraSecreta.Text = VerificarPalavra(palavra_secreta.ToCharArray(), letrasTentadas.ToCharArray());
         }
 
+        //private string SortearPalavra()
+        //{
+        //    // Lista de Palavras
+        //    List<string> palavras = new List<string> { "csharp", "python", "ruby", "php", "javascript" };
+
+        //    Random rnd = new Random();
+        //    int indiceSorteado = rnd.Next(0, palavras.Count);
+
+        //    //Recuperar a palavra correspondente ao índice sorteado
+        //    string palavraSorteada = palavras[indiceSorteado];
+
+        //    return palavraSorteada;
+        //}
+
         private string SortearPalavra()
         {
-            // Lista de Palavras
-            List<string> palavras = new List<string> { "csharp", "python", "ruby", "php", "javascript" };
+            //Define a string de conexao com o banco de dados MySQL, incluindo o servidor, usuário, banco de dados e porta. 
+            string conexaoString = "server=62.72.62.1;user=u687609827_alunos;database=u687609827_TI21;port=3306;password=@Aluno12345";
 
-            Random rnd = new Random();
-            int indiceSorteado = rnd.Next(0, palavras.Count);
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString)) // Estabelece a conexão com o banco de dados MySQL usando a classe MySqlConnection.
+            {
+                string scriptSQL = "SELECT palavra FROM tb_palavras"; //Define a consulta SQL para selecionar todas as palavras da tabela tb_palavras.
 
-            //Recuperar a palavra correspondente ao índice sorteado
-            string palavraSorteada = palavras[indiceSorteado];
+                using (MySqlCommand command = new MySqlCommand(scriptSQL, conexao)) // cria um comando MySQL com a consulta SQL e a conexão estabelecida.
+                {
+                    conexao.Open(); // abre a conexão com o banco de dados.
+                    List<string> palavrasBanco = new List<string>(); // cia uma lista para armazenar as palavras recuperadas do banco de dados.
 
-            return palavraSorteada;
+                    using (MySqlDataReader reader = command.ExecuteReader()) // Executa o comando SQL para recuperar os dados do banco de dados.
+                    {
+                        while (reader.Read()) // Itera sobre cada registro retornado pela consulta.
+                        {
+                            // obtém o valor da coluna 'palavra' e adiciona à lista de palavras
+                            string palavra = reader.GetString(0);
+                            palavrasBanco.Add(palavra);
+                        }
+                    }
+                    conexao.Close(); //fecha a conexao com o banco de dados após recuperar todas as palavras.
+
+                    Random rnd = new Random();
+                    int indiceSorteado = rnd.Next(0, palavrasBanco.Count);
+                    return palavrasBanco[indiceSorteado];
+                }
+            }
+            //return "";
         }
 
         private char[] SepararLetraPalavra(string palavra)
@@ -48,7 +82,6 @@ namespace JogoDaForca
 
             return letrasPalavra;
         }
-
         private string VerificarPalavra (char[] palavra, char[] letrasTentadas)
         {
             string palavra_escondida = "";
@@ -75,9 +108,6 @@ namespace JogoDaForca
 
 
         }
-
-
-
 
         private void btnVerificarLetra_Click(object sender, EventArgs e)
         {
